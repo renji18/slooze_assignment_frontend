@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍽 Slooze Frontend
 
-## Getting Started
+This is the frontend for the **Slooze Assignment**, a team-based food ordering platform built using **Next.js App Router**, **Tailwind CSS**, and **TypeScript**.
 
-First, run the development server:
+It connects to the Slooze NestJS backend for authentication, restaurant data, orders, and more.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## ✨ Features
+
+- 🔐 JWT Cookie-based Authentication
+- 🦸‍♂️ Comic-style login for demo users
+- 👥 Role-based access (Admin, Manager, Member)
+- 🌍 Region-based restaurant and order views
+- 🛒 Cart with dynamic add/remove logic
+- 🧾 Order listing with status, region, actions
+- 🔄 Reusable Protected Layouts
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repo
+
+```code
+git clone https://github.com/your-username/slooze-frontend.git
+cd slooze-frontend
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Run the App
+Make sure that the app is running on port 3000. In case it isn't you will need to update and allow your origin in the cors permissions in the backend src/main.ts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```code
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧑‍💻 Tech Stack
 
-## Learn More
+- ⚛️ **Next.js 14** (App Router)
+- 🎨 **Tailwind CSS** for utility-first styling
+- 💡 **TypeScript** for type safety and DX
+- 🌐 **Axios** for HTTP requests to the backend
+- 🍞 **Sonner** for clean toast notifications
+- 🧠 **JWT (via cookies)** for authentication
+- 🧩 Modular architecture using components, hooks, and layouts
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧪 Demo Users
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Use these pre-seeded accounts to log in from the homepage.  
+**Password for all users:** `password123`
 
-## Deploy on Vercel
+| 👤 Name            | 🛡 Role         | 🌍 Region   |
+|--------------------|----------------|-------------|
+| Captain Marvel     | Manager        | India       |
+| Captain America    | Manager        | America     |
+| Thanos             | Team Member    | India       |
+| Thor               | Team Member    | India       |
+| Travis             | Team Member    | America     |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+👉 On the homepage, simply click on a user card to pre-fill the login form.
