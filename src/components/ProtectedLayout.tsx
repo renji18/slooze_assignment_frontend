@@ -4,6 +4,7 @@ import {ReactNode, useEffect} from 'react';
 import {useRouter} from 'next/navigation';
 import {logout} from '@/lib/auth';
 import {useUser} from "@/hooks/useUser";
+import ThemeSelector from "@/components/ThemeSelector";
 
 export default function ProtectedLayout({children,}: {
     children: ReactNode;
@@ -28,7 +29,7 @@ export default function ProtectedLayout({children,}: {
     if (!user) return null;
 
     return (
-        <div className="min-h-screen flex bg-gray-100 text-gray-900">
+        <div className="min-h-screen flex text-gray-900">
             {/* Sidebar */}
             <aside className="bg-white border-r space-y-8 px-4 py-10 shadow-md">
                 <h1 className="text-3xl font-bold">Welcome back, <br/> {user.name} 👋</h1>
@@ -52,6 +53,8 @@ export default function ProtectedLayout({children,}: {
                         🧾 Orders
                     </button>
                 </nav>
+
+                <ThemeSelector />
 
                 <button
                     onClick={async () => {

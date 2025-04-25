@@ -50,7 +50,7 @@ export default function LoginPage() {
     }, [router, user, loading]);
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 px-4">
+        <div className="flex items-center justify-center min-h-screen px-4">
             <form
                 onSubmit={handleSubmit}
                 className="bg-white p-8 rounded-2xl shadow-2xl space-y-5 w-full max-w-sm"

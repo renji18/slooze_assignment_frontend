@@ -53,7 +53,7 @@ export default function HomePage() {
     }, [router, user, loading]);
 
     return (
-        <main className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 p-8">
+        <main className="min-h-screen p-8">
             <h1 className="text-4xl font-bold text-center mb-20">
                 🚀 Choose Your Hero to Login
             </h1>
